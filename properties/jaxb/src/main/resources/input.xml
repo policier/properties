@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Documents%20and%20Settings/mojalal/Desktop/FirstXSD.xml">
+    <env>
+        <property key="firstenv" value="fo"/>
+        <property key="123" value="333">
+			<item key="1" value="11"/>
+			<item key="2" value="12"/>
+			<item key="3" value="13"/>
+			<item key="4" value="14"/>
+        </property>
+    </env>
+    <log>
+        <property key="firstKey" value="firstValue"/>
+        <property key="secoundKey" value="secoundKey"/>
+        <property key="thirdKey" value="thirdValue"/>
+    </log>
+    <loge>  
+        <property key="firstKey" value="firstValue"/>
+        <property key="secoundKey" value="secoundKey"/>
+        <property key="thirdKey" value="thirdValue"/>
+    </loge>
+</config>  

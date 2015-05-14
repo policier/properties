@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="config">
+		<xs:complexType>
+			<xs:sequence>
+             <xs:element name="env" type="envTyp" minOccurs="0"   maxOccurs="unbounded" />
+             <xs:element name="log" type="logTyp" minOccurs="0"   maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="envTyp">
+		<xs:sequence>
+			<xs:element name="property" type="propertypTyp"  minOccurs="0"   maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="logTyp">
+		<xs:sequence>
+			<xs:element name="property" type="propertypTyp"  minOccurs="0"   maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="propertypTyp">
+		<xs:sequence>
+			<xs:element name="item" type="itemTyp"  minOccurs="0"   maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="key"   type="xs:string"/>
+		<xs:attribute name="value" type="xs:string"/>
+	</xs:complexType>
+	
+	<xs:complexType name="itemTyp">
+		<xs:attribute name="key"   type="xs:string"/>
+		<xs:attribute name="value" type="xs:string"/>
+	</xs:complexType>
+</xs:schema>
