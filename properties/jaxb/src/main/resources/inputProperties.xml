@@ -9,7 +9,7 @@
 		<properties key="firstenv1" value="fo1" />
 		<properties key="firstenv2" value="fo2">
 			<properties key="firstenv2" value="fo2">
-				<item key="1" value="11" />
+				<items key="1" value="11" />
 				<properties key="firstenv2" value="fo2">
 					<item key="1" value="11" />
 					<properties key="firstenv2" value="fo2">

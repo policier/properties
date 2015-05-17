@@ -16,13 +16,15 @@ import javax.xml.validation.Validator;
 public class Mains {
 
 	public static void main(String[] args) throws Exception {
+		LoggingErrorHandler errorHandler = new LoggingErrorHandler();
 		JAXBContext jc = JAXBContext.newInstance(Properties.class);
 		SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
 		Schema schema = sf.newSchema(new File("src/main/resources/propertiesIndent.xsd"));
 		Validator newValidator = schema.newValidator();
+		newValidator.setErrorHandler(errorHandler);
 		newValidator.validate(new StreamSource(new File("src/main/resources/inputProperties.xml")));
-		
-		
+		System.out.println(errorHandler.isValid());
+		if(errorHandler.isValid()){  
 		Marshaller marshaller = jc.createMarshaller();
 		marshaller.setSchema(schema);
 		
@@ -51,6 +53,7 @@ public class Mains {
 		marshaller.marshal(config, System.out);
 
 		System.out.println();
+		}
 	}
 
 	private static boolean isListItemNotEmpty(Properties property) {
