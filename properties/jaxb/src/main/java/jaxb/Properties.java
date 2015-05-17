@@ -5,12 +5,18 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
-public class Property implements Serializable {
+@XmlRootElement(name="properties")
+public class Properties implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private String key;
 	private String value;
 	private List<Item> itemProperties;
-	public Property(){
+	private List<Properties> properties;
+	
+	
+	public Properties(){
 		
 	}
 	@XmlAttribute
@@ -30,7 +36,7 @@ public class Property implements Serializable {
 		this.value = value;
 	}
 
-	public  Property (List<Item> itemProperties){
+	public  Properties (List<Item> itemProperties){
 		this.itemProperties=itemProperties;
 	}
 
@@ -42,5 +48,13 @@ public class Property implements Serializable {
 	@XmlElement(name="item")
 	public List<Item> getItemProperties() {
 	    return itemProperties;
+	}
+	
+	@XmlElement(name="properties")
+	public List<Properties> getProperties() {
+		return properties;
+	}
+	public void setProperties(List<Properties> properties) {
+		this.properties = properties;
 	}
 }

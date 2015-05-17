@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties >
+	<properties key="firstenv" value="fo" />
+	<properties key="123" value="333">
+	    <item key="1" value="11" />
+		<item key="2" value="12" />
+		<item key="3" value="13" />
+		<item key="4" value="14" />
+		<properties key="firstenv1" value="fo1" />
+		<properties key="firstenv2" value="fo2">
+			<properties key="firstenv2" value="fo2">
+				<item key="1" value="11" />
+				<properties key="firstenv2" value="fo2">
+					<item key="1" value="11" />
+					<properties key="firstenv2" value="fo2">
+						<item key="1" value="11" />
+					</properties>
+				</properties>
+			</properties>
+		</properties>
+		
+	</properties>
+</properties>  

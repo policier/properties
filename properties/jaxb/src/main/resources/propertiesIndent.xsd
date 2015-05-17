@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="properties" type="propertiesTyp" />
+	<xs:complexType name="propertiesTyp">
+		<xs:sequence>
+			<xs:element name="item" type="itemTyp"  minOccurs="0"   maxOccurs="unbounded" />
+			<xs:element  ref="properties"  minOccurs="0"   maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="key"   type="xs:string"/>
+		<xs:attribute name="value" type="xs:string"/>
+	</xs:complexType>
+	
+	<xs:complexType name="itemTyp">
+		<xs:attribute name="key"   type="xs:string"/>
+		<xs:attribute name="value" type="xs:string"/>  
+	</xs:complexType>
+	
+</xs:schema>
